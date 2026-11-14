@@ -2,17 +2,17 @@
 FROM ghcr.io/hassio-addons/base:14.0.0
 
 # Define the Newt version
-ARG NEWT_VERSION=1.18.1
+ARG NEWT_VERSION=1.20.0
 ENV NEWT_VERSION=${NEWT_VERSION}
 # SHA256 checksums for NEWT_VERSION above. Must be updated together with NEWT_VERSION.
 # Fetch them with:
 #   for a in amd64 arm64 arm32 arm32v6; do printf '%s ' "$a"; \
 #     curl -sL "https://github.com/fosrl/newt/releases/download/${NEWT_VERSION}/newt_linux_$a" \
 #     | sha256sum | cut -d' ' -f1; done
-ARG NEWT_SHA256_AMD64="26deaf4478375b1f7380c4b8be18c8266ab4c476c6d5715972d629a512915832"
-ARG NEWT_SHA256_ARM64="4def626ea3a7c25591e00855c32f5456295a871590571958d28ce470831d9952"
-ARG NEWT_SHA256_ARM32="93b0f5a1f4f6ebe4bc0a326d0c97b30a57d613b286bd6c3d660da7ceace1bb06"
-ARG NEWT_SHA256_ARM32V6="2d33316ec8d8ca8d925c2d36f83556e1a33b6791f198ccbc313b80e73c893508"
+ARG NEWT_SHA256_AMD64="f380273f7f92917d743ab1b0b92da3ca9e8ac72d0a9909c253633de29b4a70cb"
+ARG NEWT_SHA256_ARM64="499bfc4eb16c6021e702800118ec89645264b521ae42cf843ba87ed0ecd5a427"
+ARG NEWT_SHA256_ARM32="9fac1dcf0186d6711070083468db94c0fb580a2e4fb8572b8c7cfa4ab2ea25aa"
+ARG NEWT_SHA256_ARM32V6="f21607ef83f905e918b35eb45c2b707305f7b91bfd893c8b08fdbcaa46f85025"
 
 # Enable Newt health file
 ENV HEALTH_FILE=/tmp/healthy
